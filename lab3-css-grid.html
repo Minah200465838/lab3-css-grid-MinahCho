@@ -1,0 +1,126 @@
+<!doctype html>
+<html class="no-js" lang="">
+	<head>
+		<meta charset="utf-8">
+		<title>Lab 3 | CSS Grid</title>
+		<meta name="description" content="A CSS Grid challenge to test your new layout skills">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<style>
+			.container {
+				display: grid;
+				grid-template-columns: repeat(4, 1fr);
+				grid-template-rows: 
+				minmax(75px, auto) 
+				minmax(75px, auto) 
+				minmax(100px, auto)
+				minmax(200px, auto)
+				minmax(80px, auto) 
+				minmax(70px, auto)
+				minmax(70px, auto);
+
+				grid-template-areas: 
+					"header ad1 ad1 ad1 search"
+					"header  globalNav globalNav globalNav globalNav"
+					"navigation topS topS topS ad2"
+					"navigation globalNews nationalNews LocalNews ad2"
+					"navigation globalNews nationalNews LocalNews stockMarkets"
+					"navigation globalNews nationalNews LocalNews stockMarkets"
+					"footer footer footer footer footer";
+
+				column-gap: 10px;
+				row-gap: 10px;
+			}
+			
+			.item-a {
+				background-color: red;
+				grid-area: header;
+			}
+			.item-b {
+				background-color: #fbc02d;
+				grid-area: globalNav;
+			}
+			.item-c {
+				background-color: #b39ddb;
+				grid-area: navigation;
+			}			
+			.item-d {
+				background-color: lightyellow;
+				grid-area: footer;
+			}
+			.item-e {
+				background-color: burlywood;
+				grid-area: topS;
+			}
+			.item-f {
+				background-color: pink;
+				grid-area: globalNews;
+			}
+			.item-g {
+				background-color: darkorange;
+				grid-area: nationalNews;
+			}
+			.item-h {
+				background-color: #63ccff;
+				grid-area: LocalNews;
+			}
+			.item-i {
+				background-color: #cfd8dc;
+				grid-area: search;
+			}
+			.item-j {
+				background-color: darkolivegreen;
+				grid-area: stockMarkets;
+			}
+			.item-k {
+				background-color: #66ffa6;
+				grid-area: ad1;
+			}
+			.item-l {
+				background-color: #66bb6a;
+				grid-area: ad2;
+			}
+
+			
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="item item-a">
+				<h2>Branding</h2>
+			</div>
+			<div class="item item-b">
+				<h2>Global Nav</h2>
+			</div>
+			<div class="item item-c">
+				<h2>Local Nav</h2>
+			</div>
+			<div class="item item-d">
+				<h2>Footer</h2>
+			</div>
+			<div class="item item-e">
+				<h2>Top Story</h2>
+			</div>
+			<div class="item item-f">
+				<h2>Global News</h2>
+			</div>
+			<div class="item item-g">
+				<h2>National News</h2>
+			</div>
+			<div class="item item-h">
+				<h2>Local News</h2>
+			</div>
+			<div class="item item-i">
+				<h2>Search</h2>
+			</div>
+			<div class="item item-j">
+				<h2>Market Info</h2>
+			</div>
+			<div class="item item-k">
+				<h2>Advertising 1</h2>
+			</div>
+			<div class="item item-l">
+				<h2>Advertising 2</h2>
+			</div>
+		</div><!-- .container -->
+	</body>
+</html>
